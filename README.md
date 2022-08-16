@@ -33,6 +33,7 @@
 3. Навигация 
 4. Алгоритм поиска победителя 
 5. Изменение массива персонажей при изменении исходных данных
+![React App - Google Chrome 2022-08-16 20-18-27 (online-video-cutter com)](https://user-images.githubusercontent.com/59875675/184900217-73d1f5e3-eca4-423b-9163-3fda9601a8cf.gif)
 
 
 
