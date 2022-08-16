@@ -1,0 +1,36 @@
+/*#main > div {
+  max-width: 600px;
+  min-width: 400px;
+}
+
+#main > div h3,#main > div table, ul  {
+  margin-left: 0;
+}
+
+
+#main > div table td, ul, li {
+  padding: 0;
+  text-align: left;
+  font-size: large;
+  padding-right: 20px;
+  padding-bottom: 6px;
+}*/
+
+/* .main > div table td:nth-child(1) {
+  width: 120px;
+}
+
+.main > div table td:nth-child(2) {
+  width: 300px;
+} */
+
+ul {
+  list-style: none;
+}
+
+
+li {
+  text-align: left;
+}
+
+

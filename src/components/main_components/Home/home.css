@@ -1,0 +1,36 @@
+.home > div {
+  max-width: 600px;
+  min-width: 400px;
+}
+
+.home > div h3,.home > div table, ul  {
+  margin-left: 0;
+  text-align: left;
+}
+
+
+.home > div table td, ul, li {
+  padding: 0;
+  text-align: left;
+  font-size: large;
+  padding-right: 20px;
+  padding-bottom: 6px;
+}
+
+#contacts {
+  margin-top: 30px;
+  font-size: large;
+  flex-direction: column;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+ul {
+  list-style: none;
+}
+
+
+li {
+  text-align: left;
+}

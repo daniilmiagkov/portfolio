@@ -1,0 +1,20 @@
+.allRanges {
+  appearance: none;
+  font-family: inherit;
+  text-align: center;
+  min-width: 0;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.upRangeHorizontal {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.upRangeVertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

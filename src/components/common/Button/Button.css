@@ -1,0 +1,6 @@
+.allButtons {
+  font-family: inherit;
+  border-style: solid;
+  transition: 500ms;
+  cursor: pointer;
+}

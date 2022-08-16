@@ -1,0 +1,85 @@
+.lab3_2 .labsRangesHorizontal input {
+  margin-top: 6px;
+  background-color: white;
+  border: 1px black solid;
+  cursor: pointer;
+  accent-color: black;
+  width: 200px;
+}
+
+.lab3_2 .upRangeHorizontal {
+  width: 200px;
+}
+
+.lab3_2 .upRangeVertical {
+  height: 200px;
+  width: 20px;
+}
+
+.lab3_2 .labsRangesVertical {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+
+.lab3_2 .labsRangesVertical .range{
+  display: inline-block;
+  width: 16px;
+  height: 200px;
+  padding: 0;
+}
+
+.lab3_2 .labsRangesVertical input{
+  transform: rotate(90deg);
+  background-color: white;
+  border: 1px black solid;
+  cursor: pointer;
+  accent-color: black;
+  width: 200px;
+  margin: 0;
+  transform-origin: 10px 10px;
+  height: 16px;
+}
+
+.lab3_2 .rangeWithMatrix {
+  display: flex;
+  margin: 0 auto;
+  width: 292px;
+}
+
+.lab3_2 .squares {
+  border-radius: 4px;
+  margin-left: 10px;
+  width: 200px;
+  height: 200px;
+
+}
+
+.lab3_2 .squares table {
+  border-collapse: collapse;
+  border: 1px black solid;
+}
+
+.lab3_2 .square {
+  cursor: pointer;
+  padding: 0;
+  height: 49px;
+  width: 49px;
+  border: 1px black solid;
+  background-color: white;
+}
+
+.lab3_2 .subSquare {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: white;
+  margin: auto;
+}
+
+
+
+
+
+
+

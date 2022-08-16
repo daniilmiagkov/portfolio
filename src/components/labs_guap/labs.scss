@@ -1,0 +1,116 @@
+@import "/src/styles/Colors.scss";
+
+.labs {
+  display: flex;
+}
+
+.labsDiv {
+  width: 130px;
+}
+
+.buttonLabs {
+  /*margin-top: 17px;*/
+  font-weight: bold;
+  font-family: inherit;
+  background-color: white;
+  color: black;
+  border-width: 1px;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.buttonLabsInvert {
+  /*margin-top: 40px;*/
+  font-weight: bold;
+  font-family: inherit;
+  background-color: black;
+  color: white;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.buttonLabs p {
+  margin: 6px;
+}
+
+.buttonLabsInvert p {
+  margin: 6px;
+}
+
+.inputLabs {
+  background-clip: padding-box;
+  border: 1px black solid;
+  font-size: larger;
+  color: black;
+  padding: 6px;
+  border-radius: 10px;
+  max-width: 74px;
+}
+
+.inputLabs:focus {
+  outline: 0;
+}
+
+.blockButtons {
+  margin: auto;
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+  width: 400px;
+}
+
+.blockInput {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-evenly;
+}
+
+.workBlock {
+  max-width: 900px !important;
+  min-width: 400px;
+}
+
+.tableCharacters table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.stringCharacter td {
+  border: 1px solid #888;
+  padding: 10px;
+  text-align: left;
+  vertical-align: middle;
+  position: relative;
+}
+
+.charactersTable table .stringCharacter:hover {
+  cursor: pointer;
+}
+
+.tableCharacters {
+  width: inherit;
+  margin: 0 auto 30px auto;
+  font-size:small;
+  text-align: center;
+}
+
+.tableLabs {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tableLabs .buttonLabs {
+  width: 90px;
+}
+
+#container__range {
+  display: flex;
+  width: 100px;
+  margin: auto;
+  justify-content: space-between;
+  accent-color: black;
+}

@@ -1,0 +1,130 @@
+.crossesAndNulls .labsRangesHorizontal input {
+  margin-top: 6px;
+  background-color: white;
+  border: 1px black solid;
+  cursor: pointer;
+  accent-color: black;
+  width: 400px;
+  margin-bottom: 10px;
+}
+.crossesAndNulls span {
+  min-width: 20px;
+}
+.crossesAndNulls .upRangeHorizontal {
+  width: 400px;
+}
+
+.crossesAndNulls .upRangeVertical {
+  height: 400px;
+
+}
+
+.crossesAndNulls .labsRangesVertical {
+  display: flex;
+  height: 400px;
+  align-items: center;
+
+}
+
+.crossesAndNulls .labsRangesVertical .range{
+  display: inline-block;
+  width: 20px;
+  height: 400px;
+  padding: 0;
+}
+
+.crossesAndNulls .labsRangesVertical input{
+  transform: rotate(90deg);
+  background-color: white;
+  border: 1px black solid;
+  cursor: pointer;
+  accent-color: black;
+  width: 400px;
+  margin: 0;
+  transform-origin: 10px 10px;
+  height: 16px;
+}
+
+#inputSize {
+  margin: auto;
+  width: fit-content;
+  height: 100px;
+}
+
+#inputSize .upRangeVertical, #inputSize .range {
+  height: 100px;
+}
+
+#inputSize input{
+  width: 100px;
+}
+
+.crossesAndNulls .rangeWithMatrix {
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.crossesAndNulls h4, .crossesAndNulls h3 {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.crossesAndNulls .squares {
+  border-radius: 4px;
+  margin-left: 10px;
+  width: 400px;
+  height: 400px;
+}
+
+.crossesAndNulls .squaresGame {
+  margin-left: 0 !important;
+/*  width: 900px !important;
+  height: 900px !important;*/
+}
+
+.crossesAndNulls .squaresGame table {
+  margin: auto;
+}
+
+.crossesAndNulls .squares table, .crossesAndNulls .squaresGame table {
+  border-collapse: collapse;
+  border: 1px black solid;
+  border-spacing: 0;
+  margin: auto;
+}
+
+.crossesAndNulls .square {
+  padding: 0;
+  margin: 0;
+  border: 1px black solid;
+  background-color: white;
+}
+
+.crossesAndNulls .subSquare {
+  min-height: 11px;
+  min-width: 11px;
+  border-radius: 5px;
+  background-color: white;
+  margin: auto;
+}
+
+.crossesAndNulls #descriptionMain {
+  max-width: 100%;
+}
+
+.crossesAndNulls img {
+  display: block;
+  padding: 0;
+  margin: auto;
+}
+
+.crossesAndNulls .squaresLength {
+  width: 500px;
+  margin-left: 0;
+}
+
+
+
+
+

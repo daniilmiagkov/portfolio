@@ -1,0 +1,11 @@
+$colors: (
+  buttonTimerStart: #ADC5C7FF,
+  buttonTimerStop: #e08384ff,
+  lightYellow: #fbe89a,
+  timerBackground: #eef4f4,
+);
+
+@function color($a) {
+  @return map-get($colors, $a);
+}
+

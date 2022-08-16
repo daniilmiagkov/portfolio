@@ -1,0 +1,82 @@
+@import "index.css";
+
+@font-face {
+  font-family: "Roboto";
+  src: url(/src/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url(/src/fonts/GothamPro-Light.ttf);
+}
+
+.withoutHeader {
+  position: relative;
+  top: 72px
+}
+
+.body, .home {
+  max-width: fit-content;
+  min-width: 400px;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.body {
+  margin-top: 40px;
+  text-align: center;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#root {
+  /*font-family: 'Courier New', Courier, monospace;*/
+  /*font-family: "Roboto", serif;*/
+  font-family: "Gotham", sans-serif;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  margin: 0;
+}
+
+h1, a {
+  font-weight: lighter;
+}
+
+.footer {
+  height: 200px;
+}
+
+.button_run {
+  padding: 0;
+  border-radius: 10px;
+  background-color: white;
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.button_run:hover, .button_run a:hover {
+  background-color: black;
+  color: white
+}
+
+.button_run:active {
+  background-color: rgb(206, 254, 255);
+  color: black;
+}
+
+
+
+
