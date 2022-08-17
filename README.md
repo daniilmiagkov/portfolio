@@ -63,7 +63,7 @@
 ![React App - Google Chrome 2022-08-17 23-55-38 (online-video-cutter com)](https://user-images.githubusercontent.com/59875675/185199372-4bff0305-c5fb-407c-aac2-3d003965d323.gif)
 
 ### 4. Julia's photo
-Описание: фотографии, <a href='https://vk.com/persiiiiiimmon'>источник</a>.
+Описание: галерея фотографий, <a href='https://vk.com/persiiiiiimmon'>источник</a>.
 
 Функции: 
 1. Загрузка фотографий с сервера
@@ -74,9 +74,7 @@
 6. Изменение количества колонок фотографий при изменении размеров окна
 7. Изменение положения основной фотографии и колонок при прокрутке
 
-![React App - Google Chrome 2022-08-17 23-55-38 (online-video-cutter com)](https://user-images.githubusercontent.com/59875675/185199372-4bff0305-c5fb-407c-aac2-3d003965d323.gif)
-
-
+![2022-08-18_00-24-23 (online-video-cutter com)](https://user-images.githubusercontent.com/59875675/185210257-f7dbf13c-c58b-44de-bb68-f76f64f01c29.gif)
 
 
 
