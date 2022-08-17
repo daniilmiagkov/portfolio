@@ -56,6 +56,7 @@
 2. Таблица клеток обычная, где нельзя ставить фигуры
 3. Таблица клеток со вставкой фигур
 
+![React App - Google Chrome 2022-08-17 23-55-38 (online-video-cutter com)](https://user-images.githubusercontent.com/59875675/185199372-4bff0305-c5fb-407c-aac2-3d003965d323.gif)
 
 
 
