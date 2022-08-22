@@ -15,7 +15,7 @@ const InputValuesCharacters = (props) => {
       <h3>{props.title}</h3>
       <Input
         value={state}
-        classChild='inputLabs'
+        className='inputLabs'
         onChange={(a) => (!Number.isNaN(+a)) ? change(+a) : null}
       />
     </div>

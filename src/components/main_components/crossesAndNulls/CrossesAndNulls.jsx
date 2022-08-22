@@ -1,11 +1,8 @@
 import React from 'react';
-import {useState} from "react";
 import Range from "../../common/Range/Range";
 import Squares from "../../common/Squares/Squares";
 import Button from "../../common/Button/Button";
 import {useReducer} from "react";
-import Description from "../Description";
-import SquaresSteps from "../../labs_guap/lab_3_2/SquaresSteps";
 import './crossesAndNulls.css';
 import SquaresWithActions from "../../common/SquaresWithActions/SquaresWithActions";
 import ImageButton from "../../common/ImageButton/ImageButton";
@@ -40,7 +37,21 @@ const CrossesAndNulls = (props) => {
   
       {state.numberBlock === 3 ? <div style={{height: 20 + 'px'}}></div> : null}
       {state.numberBlock === 3 ? <h4>{state.score.left}/{state.score.right}</h4> : null}
-    
+      {(state.numberBlock === 3) ?
+        <div className='crossesAndNulls'>
+          <div style={{height: 20 + 'px'}}></div>
+          <Button
+            text={'reset score'}
+            className='buttonLabs'
+            style={{width: '60px'}}
+            onClick={
+              () => {
+                setState({
+                  score: {left: 0, right: 0},
+                  squares: getArray(state.height,state.width),
+                  finish: 0,
+                  text: 'the game has started',})}}/>
+        </div> : null}
     </div>
     
     <div className='workBlock'>
@@ -57,17 +68,13 @@ const CrossesAndNulls = (props) => {
           <ImageButton
             alt='reset' src='img/reset.png'
             className='buttonLabs'
+            id='buttonReset'
             onClick={() => {
               setState({
                 squares: getArray(state.height,state.width),
                 finish: 0,
                 text: 'the game has started',
               })
-                state.squares.map(i => {
-                  i.array.map((j) => {
-                    document.getElementById(j.id).style.backgroundColor = 'white';
-                  })
-                })
             }}/> </div> : null}
   
       {state.numberBlock < 3 ? <div style={{height: 20 + 'px'}}></div> : null}
@@ -90,24 +97,10 @@ const CrossesAndNulls = (props) => {
             className='labsRangesVertical'
             max={() => 100}
             step={1}
-            onlyLast={0}
+            onlyLast={1}
             value={state.size}
             onChange={(a) => setState({size: +a})}
           />
-        </div> : null}
-  
-      {(state.numberBlock === 3) ?
-        <div className='crossesAndNulls'>
-          <div style={{height: 20 + 'px'}}></div>
-          <Button
-            text={'reset score'}
-            className='buttonLabs'
-            style={{width: '60px'}}
-            onClick={
-            () => {
-              setState({
-                score: {left: 0, right: 0},
-                squares: getArray(state.height, state.width)})}}/>
         </div> : null}
     </div>
   </div>)
@@ -217,7 +210,6 @@ const CrossesAndNulls = (props) => {
         k = 2;
       }
     }
-  
     let x = window.matchMedia("(max-width: 960px)")
     myFunction(x) // Вызов функции прослушивателя во время выполнения
     x.addListener(myFunction) // Присоединить функцию прослушивателя при изменении состояния

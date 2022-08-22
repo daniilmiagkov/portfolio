@@ -41,12 +41,12 @@ const Home = () => {
           </tr>
           <tr>
             <td>email:</td>
-            <td><a href="mailto:d.miagkov@gmail.com" target="_blank">d.miagkov@gmail.com</a></td>
+            <td><a href="mailto:d.miagkov.work@gmail.com" target="_blank">d.miagkov.work@gmail.com</a></td>
           </tr>
           </tbody>
         </table>
         <div id='contacts'>
-          <a href="https://t.me/daniil_miagkov_2" target="_blank">telegram</a>
+          <a href="https://t.me/daniil_miagkov_l" target="_blank">telegram</a>
           <a href="https://vk.com/daniil_miagkov" target="_blank">vk</a>
           <a href="https://github.com/daniilmiagkov" target="_blank">github</a>
         </div>

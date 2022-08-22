@@ -1,72 +1,68 @@
 import React from 'react';
 import {useEffect, useState} from "react";
+import {useReducer} from "react";
 
 const SquaresSteps = (props) => {
-  const [number, setNumber] = useState(props.square);
-  const [numberDynamic, setNumberDynamic] = useState(-1);
+  const initialState = {
+    number: props.square,
+    numberDynamic: -1,
+    img: 'cross',
+    array: props.squares,
+/*    score: props.score(),*/
+  };
   
-  useEffect(() => {
-    let elem, inArrayNumberDynamic = 0, inArrayNumber = 0;
-    
+  const [state, setState] = useReducer((state, updates) => ({
+    ...state,
+    ...updates,
+  }), initialState);
+  
+  function click(id) {
     props.squares.map(i => {
-      i.array.map((id) => {
-        elem = document.getElementById(id);
-        elem.style.backgroundColor = 'white';
-        elem = document.getElementById(id + 'sub');
-        elem.style.backgroundColor = 'white';
-        
-        if (id === numberDynamic)
-          inArrayNumberDynamic = 1;
-        
-        if (id === number)
-          inArrayNumber = 1;
-      });
+      i.array.map((j) => {
+      
+      })
     })
-    
-    
-    if (numberDynamic !== -1 && inArrayNumberDynamic !== 0) {
-      elem = document.getElementById(numberDynamic);
-      elem.style.backgroundColor = '#d6f1f1';
-      elem = document.getElementById(numberDynamic + 'sub');
-      elem.style.backgroundColor = '#d6f1f1';
-    }
-    
-    if (number !== -1 && inArrayNumber !== 0) {
-      elem = document.getElementById(number + 'sub');
-      elem.style.backgroundColor = 'black';
-    }
-    
-    if (inArrayNumber === 0) {
-      setNumber(-1);
-    }
-  })
+  }
+  
+  function over(id) {
+    let squares = [];
+    Object.assign(squares, state.array);
+    squares.map(i => {
+      i.array.map((j) => {
+        if (id === j.id)
+          j.imgName = 'rightArrowLong';
+      })
+    })
+    setState({array: squares});
+  }
+  
+  function out(id) {
+    let squares = [];
+    Object.assign(squares, state.array);
+    squares.map(i => {
+      i.array.map((j) => {
+        if (id === j.id)
+          j.imgName = null;
+      })
+    })
+  }
   
   return (
-    <div className='squares'>
+    <div className='squaresSteps'>
       <table>
         <tbody>
         {props.squares.map((i) =>
           <tr key = {i.key}>
             {i.array.map((j) =>
               <td
-                id={j}
-                key={j}
+                id={j.id}
+                key={j.id}
                 className='square'
-                onClick={() => {
-                  props.onClick(j)
-                  setNumber(j);
-                }}
-                onMouseOver={() => {
-                  setNumberDynamic(j);
-                }}
-                onMouseOut={() => {
-                  setNumberDynamic(-1);
-                }}
+                onClick={() => {click(j.id)}}
+                onMouseOver={() => {over(j.id)}}
+                onMouseOut={() => {out(j.id)}}
               >
-                <div
-                  id={j + 'sub'}
-                  className='subSquare'>
-                </div>
+                  {setImg(j.imgName)}
               </td>
             )}
           </tr>
@@ -75,6 +71,15 @@ const SquaresSteps = (props) => {
       </table>
     </div>
   );
+  
+  function setImg(a) {
+    /*let sizeImage = props.sizeSquare() + 'px';
+    let sizeImage918 = props.sizeSquare() * 0.918 + 'px';
+*/    switch (a) {
+      case 'rightArrowLong': return <img style={{width: 47 + 'px', height: 47 + 'px'}} src={'img/rightArrowLong.png'} alt='cross'/>;
+      default: return  null
+    }
+  }
 };
 
 export default SquaresSteps;

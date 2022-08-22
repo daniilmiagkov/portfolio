@@ -3,11 +3,19 @@ import Button from "../../common/Button/Button";
 import Description from "../../main_components/Description";
 import Range from "../../common/Range/Range";
 import './Lab_3_2.scss'
-import Squares from "../../common/Squares/Squares";
+import SquaresStartPoint from "./SquaresStartPoint";
+import Input from "../../common/Input/Input";
 import SquaresSteps from "./SquaresSteps";
 
 const Lab_3_2 = (props) => {
   const initialState = {
+    arraySteps: [{
+      key: '1_1',
+      x: 1,
+      y: 1,
+    }],
+    x: 0,
+    y: 0,
     height: 2,
     width: 2,
     square: '',
@@ -35,10 +43,7 @@ const Lab_3_2 = (props) => {
       </div>
       <div style={{height: 20 + 'px'}}>
       </div>
-      
       <div>{state.buttonRun}</div>
-    
-    
     </div>
     
     <div className='workBlock'>
@@ -53,10 +58,8 @@ const Lab_3_2 = (props) => {
       
       <div style={{height: 20 + 'px'}}></div>
       
-      <div >
-        {
-          (state.numberBlock > 1) ? <Button text='back' className='buttonLabs' onClick={() => setState({numberBlock: state.numberBlock - 1})}/> : null
-        }
+      <div>
+        {(state.numberBlock > 1) ? <Button text='back' className='buttonLabs' onClick={() => setState({numberBlock: state.numberBlock - 1})}/> : null}
       </div>
     </div>
   </div>)
@@ -67,37 +70,75 @@ const Lab_3_2 = (props) => {
         return <Description
           description={state.description}/>;
       case 1:
-        return (<div className='lab3_2'>
-          <h4>Настройте размер поля и выберите начальный квадрат</h4>
-          <Range
-            classChildUp='upRangeHorizontal'
-            className='labsRangesHorizontal'
-            max={4}
-            step={1}
-            value={state.width}
-            onChange={(a) => getSquares('width', +a)}
-          />
-          <div className='rangeWithMatrix'>
+        return (
+          <div className='lab3_2'>
+            <h4>Настройте размер поля и выберите начальный квадрат</h4>
             <Range
-              classChildUp='upRangeVertical'
-              className='labsRangesVertical'
-              max={4}
+              classChildUp='upRangeHorizontal'
+              className='labsRangesHorizontal'
+              max={() => 4}
               step={1}
-              value={state.height}
-              onChange={(a) => getSquares('height', +a)}
+              value={state.width}
+              onChange={(a) => getSquares('width', +a)}
             />
-            <SquaresSteps
-              squares={state.squares}
-              onClick={(j) => setState({square: j})}
-              square={state.square}
-            />
-          </div>
-          
-        </div>);
+            <div className='rangeWithMatrix'>
+              <Range
+                classChildUp='upRangeVertical'
+                className='labsRangesVertical'
+                max={() => 4}
+                step={1}
+                value={state.height}
+                onChange={(a) => getSquares('height', +a)}
+              />
+              <SquaresStartPoint
+                squares={state.squares}
+                onClick={(j) => setState({square: j})}
+                square={state.square}
+              />
+            </div>
+          </div>);
       case 2:
-        return <div>
+        return <div className='lab3_2'>
           <h4>Выберите варианты ходов</h4>
-          
+          {/*<div className='arraySteps'>
+          {state.arraySteps.map((step) =>
+            <div key={step.key} className='steps'>
+            <span>{step.x}; </span>
+            <span>{step.y}</span>
+          </div>)}
+          </div>
+          <Input
+            className="inputLabs"
+            value={state.x}
+            onChange={(a) => {
+              setState({x: a})
+            }}
+          />
+          <Input
+            className="inputLabs"
+            value={state.y}
+            onChange={(a) => {
+              setState({y: a})
+            }}/>*/}
+          <SquaresSteps
+            squares={getArray(5,5)}
+            onClick={(j) => setState({square: j})}
+            square={state.square}
+          />
+          {/*<Button
+            text='+'
+            className='buttonLabs'
+            onClick={() => {
+              let a = state.arraySteps;
+              a.push({
+                x: state.x,
+                y: state.y
+              })
+              setState({
+                array: a
+              })
+            }}
+          />*/}
         </div>
       case 3:
         return (<div></div>)
@@ -120,7 +161,12 @@ const Lab_3_2 = (props) => {
       
       temp.array = [];
       for (let j = 0; j < b; j++) {
-        temp.array.push(i.toString() + '.' + j.toString());
+        temp.array.push({
+          id: i.toString() + '.' + j.toString(),
+          img: null,
+          imgName: null,
+          cross: null,
+        });
       }
       array.push(temp);
     }

@@ -57,7 +57,7 @@
 
 .lab3_2 .squares table {
   border-collapse: collapse;
-  border: 1px black solid;
+  /*border: 1px black solid;*/
 }
 
 .lab3_2 .square {
@@ -69,12 +69,28 @@
   background-color: white;
 }
 
-.lab3_2 .subSquare {
-  height: 16px;
-  width: 16px;
-  border-radius: 8px;
-  background-color: white;
+/*.lab3_2 .steps {
+  border: 1px black solid;
+  width: 80px;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.lab3_2 .arraySteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}*/
+
+.lab3_2 .squaresSteps table{
   margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.lab3_2 .squaresSteps img{
+  margin: auto;
+  display: block;
+  padding: 0;
 }
 
 

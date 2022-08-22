@@ -3,7 +3,7 @@ import './Input.css'
 
 const Input = (props) => {
   return (
-    <input className={[props.classChild, 'allInputs'].join(' ')}
+    <input className={[props.className, 'allInputs'].join(' ')}
            type="text"
            value={props.value}
            onChange={(e) => props.onChange(e.target.value)}/>

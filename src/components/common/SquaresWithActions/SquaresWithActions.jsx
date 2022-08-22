@@ -4,11 +4,11 @@ import Button from "../Button/Button";
 import {useReducer} from "react";
 
 const Squares = (props) => {
-  let imgCross = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px'}} src={'img/cross_border_9px.png'} alt='cross'/>
-  let imgNull = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px'}} src={'img/null_border_9px.png'} alt='plus'/>
-  let imgCross50 = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px', cursor: 'pointer'}} src={'img/cross_border_9px_50.png'} alt='cross'/>
-  let imgNull50 = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px', cursor: 'pointer'}}src={'img/null_border_9px_50.png'} alt='plus'/>
-  let imgCrossBlack = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px'}} src={'img/cross_black.png'} alt='cross'/>
+  let imgCross = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px'}} src={'img/crossesAndNulls/cross_border_9px.png'} alt='cross'/>
+  let imgNull = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px'}} src={'img/crossesAndNulls/null_border_9px.png'} alt='plus'/>
+  let imgCross50 = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px', cursor: 'pointer'}} src={'img/crossesAndNulls/cross_border_9px_50.png'} alt='cross'/>
+  let imgNull50 = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px', cursor: 'pointer'}}src={'img/crossesAndNulls/null_border_9px_50.png'} alt='plus'/>
+  let imgCrossBlack = <img style={{width: props.sizeSquare + 'px', height: props.sizeSquare + 'px'}} src={'img/crossesAndNulls/cross_black.png'} alt='cross'/>
   
   let arrayWin = [], variants, allVariants, victoryOption;
   
@@ -240,7 +240,7 @@ const Squares = (props) => {
   return (
     <div className={[props.className, 'squaresWithActions'].join(' ')}>
       <h4 style={{height: '20px'}}>{props.text()}</h4>
-      <table>
+      <table id='squaresWithActions__table'>
         <tbody>
         {props.squares().map((i) =>
           <tr key = {i.key}>
@@ -270,18 +270,18 @@ const Squares = (props) => {
     let sizeImage = props.sizeSquare() + 'px';
     let sizeImage918 = props.sizeSquare() * 0.918 + 'px';
     switch (a) {
-      case 'imgCross': return <img style={{width: sizeImage918, height: sizeImage918}} src={'img/cross_border_9px.png'} alt='cross'/>;
-      case 'imgNull': return <img style={{width: sizeImage918, height: sizeImage918}} src={'img/null_border_9px.png'} alt='plus'/>;
-      case 'imgCross50': return <img style={{width: sizeImage918, height: sizeImage918, cursor: 'pointer'}} src={'img/cross_border_9px_50.png'} alt='cross'/>;
-      case 'imgNull50': return <img style={{width: sizeImage918, height: sizeImage918, cursor: 'pointer'}} src={'img/null_border_9px_50.png'} alt='plus'/>;
-      case 'imgCrossBlackVertical': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossBlackVertical.png'} alt='cross'/>
-      case 'imgCrossBlackHorizontal': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossBlackHorizontal.png'} alt='cross'/>
-      case 'imgCrossBlackMain': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossBlackMain.png'} alt='cross'/>
-      case 'imgCrossBlackSecondary': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossBlackSecondary.png'} alt='cross'/>
-      case 'imgNullBlackVertical': return <img style={{width: sizeImage, height: sizeImage}} src={'img/nullBlackVertical.png'} alt='null'/>
-      case 'imgNullBlackHorizontal': return <img style={{width: sizeImage, height: sizeImage}} src={'img/nullBlackHorizontal.png'} alt='null'/>
-      case 'imgNullBlackMain': return <img style={{width: sizeImage, height: sizeImage}} src={'img/nullBlackMain.png'} alt='null'/>
-      case 'imgNullBlackSecondary': return <img style={{width: sizeImage, height: sizeImage}} src={'img/nullBlackSecondary.png'} alt='null'/>
+      case 'imgCross': return <img style={{width: sizeImage918, height: sizeImage918}} src={'img/crossesAndNulls/cross_border_9px.png'} alt='cross'/>;
+      case 'imgNull': return <img style={{width: sizeImage918, height: sizeImage918}} src={'img/crossesAndNulls/null_border_9px.png'} alt='plus'/>;
+      case 'imgCross50': return <img style={{width: sizeImage918, height: sizeImage918, cursor: 'pointer'}} src={'img/crossesAndNulls/cross_border_9px_50.png'} alt='cross'/>;
+      case 'imgNull50': return <img style={{width: sizeImage918, height: sizeImage918, cursor: 'pointer'}} src={'img/crossesAndNulls/null_border_9px_50.png'} alt='plus'/>;
+      case 'imgCrossBlackVertical': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossesAndNulls/crossBlackVertical.png'} alt='cross'/>
+      case 'imgCrossBlackHorizontal': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossesAndNulls/crossBlackHorizontal.png'} alt='cross'/>
+      case 'imgCrossBlackMain': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossesAndNulls/crossBlackMain.png'} alt='cross'/>
+      case 'imgCrossBlackSecondary': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossesAndNulls/crossBlackSecondary.png'} alt='cross'/>
+      case 'imgNullBlackVertical': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossesAndNulls/nullBlackVertical.png'} alt='null'/>
+      case 'imgNullBlackHorizontal': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossesAndNulls/nullBlackHorizontal.png'} alt='null'/>
+      case 'imgNullBlackMain': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossesAndNulls/nullBlackMain.png'} alt='null'/>
+      case 'imgNullBlackSecondary': return <img style={{width: sizeImage, height: sizeImage}} src={'img/crossesAndNulls/nullBlackSecondary.png'} alt='null'/>
       default: return  null
     }
   }

@@ -15,14 +15,14 @@ const Range = (props) => {
   
   function getNumbers() {
     if (props.withoutNumbers !== 1) {
-        if (props.onlyLast !== 0) {
+        if (props.onlyLast !== 1) {
           return <div className={props.classChildUp}>
             {array.map((element) => <span key={element.toString()}>{element}</span>)}
           </div>
         }
         else {
           return <div className={props.classChildUp}>
-            {[0, props.max].map((element) => <span key={element.toString()}>{element}</span>)}
+            {[0, props.max()].map((element) => <span key={element.toString()}>{element}</span>)}
           </div>
         }
     }
