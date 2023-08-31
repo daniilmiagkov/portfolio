@@ -40,6 +40,16 @@
 6. Сортировка
 
 ![React App - Google Chrome 2022-08-16 20-18-27 (online-video-cutter com)](https://user-images.githubusercontent.com/59875675/184900217-73d1f5e3-eca4-423b-9163-3fda9601a8cf.gif)
+#### 2. Поиск путей
+Функции: 
+1. Выбор размера поля
+2. Выбор начальной точки
+3. Выбор вариантов ходов
+4. Просмотр анимации прохождения пути
+
+
+https://github.com/daniilmiagkov/portfolio/assets/59875675/72d04343-db05-4fb8-a8f8-daf05b3cc077
+
 
 ### 3. Крестики нолики
 Описание: игра.
