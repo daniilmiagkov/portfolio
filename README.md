@@ -72,7 +72,7 @@ https://github.com/daniilmiagkov/portfolio/assets/59875675/72d04343-db05-4fb8-a8
 ![React App - Google Chrome 2022-08-17 23-55-38 (online-video-cutter com)](https://user-images.githubusercontent.com/59875675/185199372-4bff0305-c5fb-407c-aac2-3d003965d323.gif)
 
 ### 4. Фотографии
-Описание: галерея фотографий, <a href='https://vk.com/persiiiiiimmon'>источник фотографий</a>.
+Описание: галерея фотографий.
 
 Функции: 
 1. Загрузка фотографий с сервера
@@ -82,9 +82,6 @@ https://github.com/daniilmiagkov/portfolio/assets/59875675/72d04343-db05-4fb8-a8
 5. Смена фотографий под удары барабанов из песни. Чтобы включить, нужно изменить значение переменной music с 0 на 1.
 6. Изменение количества колонок фотографий при изменении размеров окна
 7. Изменение положения основной фотографии и колонок при прокрутке
-
-Не реализованы: 
-1. Динамическая подгрузка фотографий
 
 ![2022-08-18_00-24-23 (online-video-cutter com)](https://user-images.githubusercontent.com/59875675/185210257-f7dbf13c-c58b-44de-bb68-f76f64f01c29.gif)
 
